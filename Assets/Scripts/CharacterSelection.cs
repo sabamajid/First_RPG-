@@ -1,13 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class CharacterSelection : MonoBehaviour
 {
+    public static CharacterSelection instance;
 
+    private void Awake()
+    {
+        // If there is an instance, and it's not me, delete myself.
+
+        if (instance != null && instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            instance = this;
+        }
+    }
     //Selected images of hero
     public Image heroimage1;
     public Image heroimage2;
@@ -16,8 +31,6 @@ public class CharacterSelection : MonoBehaviour
     //Button that shows Character is Selected or not
 
     public Text SelectedBtn;
-    
-
     public GameObject[] Characters;
     public int selectedCharacter = 0;
 
