@@ -1,0 +1,16 @@
+﻿<Properties StartupConfiguration="{15EB4F10-43B5-383C-68E3-F1B2837023C9}|">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="3110e1f5-0cac-4027-ad98-688ac957bd02" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CharacterSelection.cs">
+    <Files>
+      <File FileName="Assets/Scripts/CharacterSelection.cs" Line="86" Column="10" />
+      <File FileName="Assets/Scripts/SpawnCharacter.cs" Line="16" Column="77" />
+      <File FileName="Assets/Scripts/HeroManager.cs" Line="24" Column="48" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -37,26 +38,50 @@ public class CharacterSelection : MonoBehaviour
 
     private void Start()
     {
-       
-        //to check which characters are selected
 
+
+        //to check which characters are selected
         for (int i=0; i<Characters.Length; i++)
         {
                 Characters[i].tag = "isNotSelected";
+         
         }
     }
     public void NextCharacter()
     {
+
+
+        
+
         Characters[selectedCharacter].SetActive(false);
         selectedCharacter = (selectedCharacter + 1) % Characters.Length;
         Characters[selectedCharacter].SetActive(true);
 
-        HeroSelectionCheck();
-    }
+        StartCoroutine(ExampleCoroutine());
 
+
+        HeroSelectionCheck();
+
+    }
+    IEnumerator ExampleCoroutine()
+    {
+        yield return new WaitForSeconds(0f);
+
+        if (Characters[selectedCharacter].GetComponent<HeroManager>().isLocked == true)
+        {
+            SelectedBtn.text = "Locked";
+            SelectedBtn.transform.parent.gameObject.GetComponent<Button>().interactable = false;
+        }
+        else
+        {
+            SelectedBtn.text = "Select";
+            SelectedBtn.transform.parent.gameObject.GetComponent<Button>().interactable = true;
+        }
+    }
     public void previousCharacter()
     {
-     
+       
+
         Characters[selectedCharacter].SetActive(false);
         selectedCharacter--;
         if (selectedCharacter < 0)
@@ -66,8 +91,20 @@ public class CharacterSelection : MonoBehaviour
         }
         Characters[selectedCharacter].SetActive(true);
 
+        if (Characters[selectedCharacter].GetComponent<HeroManager>().isLocked == true)
+        {
+            SelectedBtn.text = "Locked";
+            SelectedBtn.transform.parent.gameObject.GetComponent<Button>().interactable = false;
+        }
+        else
+        {
+            SelectedBtn.text = "Select";
+            SelectedBtn.transform.parent.gameObject.GetComponent<Button>().interactable = true;
+        }
+
         HeroSelectionCheck();
 
+      
     }
 
     public void startGame()
@@ -121,11 +158,24 @@ public class CharacterSelection : MonoBehaviour
 
     public void Character_isSelected()
     {
+        if (Characters[selectedCharacter].GetComponent<HeroManager>().isLocked)
+        {
+            SelectedBtn.text = "Locked";
+            SelectedBtn.transform.parent.gameObject.GetComponent<Button>().interactable = false;
+
+        }
+        else
+        {
+            SelectedBtn.text = "Select";
+            SelectedBtn.transform.parent.gameObject.GetComponent<Button>().interactable = true;
+        }
+
         SelectedBtn.GetComponent<Text>().text = "Selected";
     }
 
     public void HeroSelectionCheck()
     {
+
         if (Characters[selectedCharacter].tag == "isSelected")
         {
             SelectedBtn.text = "Selected";
@@ -135,6 +185,14 @@ public class CharacterSelection : MonoBehaviour
         {
             SelectedBtn.text = "Select";
         }
+    }
+    public void UnlockCharacter()
+    {
+        PlayerPrefs.SetInt("Hero" + selectedCharacter, 1); 
+        Characters[selectedCharacter].GetComponent<HeroManager>().isLocked = false;
+
+        SelectedBtn.text = "Select";
+        SelectedBtn.transform.parent.gameObject.GetComponent<Button>().interactable = true;
     }
 
 
