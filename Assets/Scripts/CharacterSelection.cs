@@ -68,7 +68,7 @@ public class CharacterSelection : MonoBehaviour
 
     public void startGame()
     {
-        PlayerPrefs.SetInt("selectedCharacter", selectedCharacter);
+       // PlayerPrefs.SetInt("selectedCharacter", selectedCharacter);
         SceneManager.LoadScene(1, LoadSceneMode.Single);
     }
 
@@ -87,6 +87,7 @@ public class CharacterSelection : MonoBehaviour
         {
             if (heroimage1.sprite == null)
             {
+                PlayerPrefs.SetInt("selectedCharacter1", selectedCharacter);
                 heroimage1.GetComponent<Image>().sprite = Characters[selectedCharacter].GetComponent<Image>().sprite;
                 Characters[selectedCharacter].tag = "isSelected";
                 Character_isSelected();
@@ -96,6 +97,7 @@ public class CharacterSelection : MonoBehaviour
             }
             if (heroimage2.sprite == null)
             {
+                PlayerPrefs.SetInt("selectedCharacter2", selectedCharacter);
                 heroimage2.GetComponent<Image>().sprite = Characters[selectedCharacter].GetComponent<Image>().sprite;
                 Characters[selectedCharacter].tag = "isSelected";
                 Character_isSelected();
@@ -103,6 +105,7 @@ public class CharacterSelection : MonoBehaviour
             }
             if (heroimage3.sprite == null)
             {
+                PlayerPrefs.SetInt("selectedCharacter3", selectedCharacter);
                 heroimage3.GetComponent<Image>().sprite = Characters[selectedCharacter].GetComponent<Image>().sprite;
                 Characters[selectedCharacter].tag = "isSelected";
                 Character_isSelected();

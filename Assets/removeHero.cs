@@ -26,7 +26,7 @@ public class removeHero : MonoBehaviour
             {
 
                 Heros[i].tag = "isNotSelected";
-
+                CharacterSelection.instance.SelectedBtn.text = "Select";
             }
             Debug.Log("Name not matched");
         }
