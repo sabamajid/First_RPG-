@@ -34,11 +34,15 @@ public class CharacterSelection : MonoBehaviour
     public GameObject[] Characters;
     public int selectedCharacter = 0;
 
+
     private void Start()
     {
-       for(int i=0; i<Characters.Length; i++)
+       
+        //to check which characters are selected
+
+        for (int i=0; i<Characters.Length; i++)
         {
-            Characters[i].tag = "isNotSelected";
+                Characters[i].tag = "isNotSelected";
         }
     }
     public void NextCharacter()
@@ -120,11 +124,6 @@ public class CharacterSelection : MonoBehaviour
         SelectedBtn.GetComponent<Text>().text = "Selected";
     }
 
-    //public void Character_isNotSelected()
-    //{
-    //    SelectedBtn.GetComponent<Text>().text = "Select";
-    //}
-
     public void HeroSelectionCheck()
     {
         if (Characters[selectedCharacter].tag == "isSelected")
@@ -137,5 +136,6 @@ public class CharacterSelection : MonoBehaviour
             SelectedBtn.text = "Select";
         }
     }
+
 
 }
