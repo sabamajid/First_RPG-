@@ -6,6 +6,7 @@ TagManager:
   tags:
   - isSelected
   - isNotSelected
+  - Clone
   layers:
   - Default
   - TransparentFX

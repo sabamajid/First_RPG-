@@ -58,8 +58,10 @@
   <ItemGroup>
     <Compile Include="Assets/Scripts/SpawnCharacter.cs" />
     <Compile Include="Assets/Scripts/removeHero.cs" />
-    <Compile Include="Assets/Scripts/CharacterSelection.cs" />
     <Compile Include="Assets/Scripts/HeroManager.cs" />
+    <Compile Include="Assets/Scripts/CharacterSelection.cs" />
+    <Compile Include="Assets/CharacterManager.cs" />
+    <Compile Include="Assets/CloneController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
