@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class CharacterManager : MonoBehaviour
 {
-    int var = 0;
+    private bool isWalking;
 
     [SerializeField] private float moveSpeed = 7f;
 
@@ -38,9 +38,18 @@ public class CharacterManager : MonoBehaviour
         Vector3 moveDir = new Vector3(inputVector.x, 0f, inputVector.y);
         transform.position += moveDir * moveSpeed * Time.deltaTime;
 
-        float rotatioSpeed = 10f;
+        isWalking = moveDir != Vector3.zero;
+
+
+        float rotatioSpeed = 5f;
         transform.forward = Vector3.Slerp(transform.forward, moveDir, Time.deltaTime* rotatioSpeed);
 
     }
+
+    public bool IsWalking()
+    {
+        return isWalking;
+    }
+
 }
 
