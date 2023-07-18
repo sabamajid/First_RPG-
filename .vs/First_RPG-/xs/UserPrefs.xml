@@ -3,9 +3,10 @@
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="3110e1f5-0cac-4027-ad98-688ac957bd02" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CharacterSelection.cs">
     <Files>
-      <File FileName="Assets/Scripts/CharacterSelection.cs" Line="86" Column="10" />
+      <File FileName="Assets/Scripts/CharacterSelection.cs" Line="68" Column="42" />
       <File FileName="Assets/Scripts/SpawnCharacter.cs" Line="16" Column="77" />
-      <File FileName="Assets/Scripts/HeroManager.cs" Line="24" Column="48" />
+      <File FileName="Assets/Scripts/HeroManager.cs" Line="19" Column="12" />
+      <File FileName="Assets/Scripts/removeHero.cs" Line="22" Column="93" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MultiItemStartupConfigurations />
