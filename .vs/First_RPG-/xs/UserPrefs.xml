@@ -3,16 +3,17 @@
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="bed12db5-7c38-4171-9265-f159dfaf4609" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CloneController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/EnemyAiTutorial.cs">
     <Files>
-      <File FileName="Assets/Scripts/CharacterSelection.cs" Line="68" Column="42" />
-      <File FileName="Assets/Scripts/SpawnCharacter.cs" Line="23" Column="26" />
+      <File FileName="Assets/Scripts/CharacterSelection.cs" Line="113" Column="10" />
+      <File FileName="Assets/Scripts/SpawnCharacter.cs" Line="24" Column="110" />
       <File FileName="Assets/Scripts/HeroManager.cs" Line="19" Column="12" />
       <File FileName="Assets/Scripts/removeHero.cs" Line="22" Column="28" />
-      <File FileName="Assets/CharacterManager.cs" Line="45" Column="1" />
-      <File FileName="Assets/CloneController.cs" Line="42" Column="6" />
-      <File FileName="Assets/AnimatorController.cs" Line="16" Column="20" />
-      <File FileName="Assets/Scripts/CloneController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/CloneController.cs" Line="22" Column="17" />
+      <File FileName="Assets/SceneManager.cs" Line="95" Column="26" />
+      <File FileName="Assets/Scripts/CharacterManager.cs" Line="73" Column="56" />
+      <File FileName="Assets/HealthManager.cs" Line="5" Column="27" />
+      <File FileName="Assets/Scripts/EnemyAiTutorial.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

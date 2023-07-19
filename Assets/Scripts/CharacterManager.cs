@@ -25,19 +25,19 @@ public class  CharacterManager : MonoBehaviour
 
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            inputVector.y = -1;
+            inputVector.y = +1;
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            inputVector.y = +1;
+            inputVector.y = -1;
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            inputVector.x = +1;
+            inputVector.x = -1;
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            inputVector.x = -1;
+            inputVector.x = +1;
         }
         inputVector = inputVector.normalized;
 
@@ -61,16 +61,16 @@ public class  CharacterManager : MonoBehaviour
             Debug.Log("about to Hit the enemy");
             if (Physics.Raycast(transform.position, raycastDirection, out hit, raycastDistance, Enemy))
             {
-                // Check if the raycast hit an object with the Health script attached
                 HealthManager healthScript = hit.collider.GetComponent<HealthManager>();
                 if (healthScript != null)
                 {
                     // Perform damage to the hit object (you can adjust the damage value as needed)
                     healthScript.TakeDamage(10);
                 }
-            }
 
+            }
             StartCoroutine(WaitCourtineGunParticles());
+
         }
 
     }
@@ -80,6 +80,7 @@ public class  CharacterManager : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         GunFlasPArticles.SetActive(false);
     }
+
     public bool IsWalking()
     {
         return isWalking;
