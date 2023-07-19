@@ -21,7 +21,7 @@ public class SpawnCharacter : MonoBehaviour
            
 
             GameObject prefab = characterPrefabs[selectedCharacter[i]];
-            GameObject clone = Instantiate(prefab, spawnPoint[pos].position, Quaternion.identity);
+            GameObject clone = Instantiate(prefab, spawnPoint[pos].position, Quaternion.Euler(0f, 180f, 0f));
             pos ++;
 
             Name.text = prefab.name;

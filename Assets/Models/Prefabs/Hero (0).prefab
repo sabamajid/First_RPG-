@@ -818,6 +818,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ee24d135109a470cb93b951d365dee2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isActive: 0
+  virtualCamera: {fileID: 0}
 --- !u!137 &8858991558507839669
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0

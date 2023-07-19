@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class CharacterManager : MonoBehaviour
+public class  CharacterManager : MonoBehaviour
 {
     private bool isWalking;
 
@@ -19,11 +19,11 @@ public class CharacterManager : MonoBehaviour
 
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            inputVector.y = +1;
+            inputVector.y = -1;
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            inputVector.y = -1;
+            inputVector.y = +1;
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
@@ -39,6 +39,7 @@ public class CharacterManager : MonoBehaviour
         transform.position += moveDir * moveSpeed * Time.deltaTime;
 
         isWalking = moveDir != Vector3.zero;
+
 
 
         float rotatioSpeed = 5f;
