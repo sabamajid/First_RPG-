@@ -56,13 +56,14 @@
     <Analyzer Include="/Applications/Visual Studio.app/Contents/MonoBundle/Addins/MonoDevelop.Unity/Analyzers/Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/CloneController.cs" />
+    <Compile Include="Assets/Scripts/CloneController.cs" />
     <Compile Include="Assets/Scripts/SpawnCharacter.cs" />
     <Compile Include="Assets/Scripts/removeHero.cs" />
+    <Compile Include="Assets/Scripts/AnimatorController.cs" />
     <Compile Include="Assets/Scripts/HeroManager.cs" />
     <Compile Include="Assets/Scripts/CharacterSelection.cs" />
-    <Compile Include="Assets/CharacterManager.cs" />
-    <Compile Include="Assets/AnimatorController.cs" />
+    <Compile Include="Assets/Scripts/CharacterManager.cs" />
+    <Compile Include="Assets/SceneManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -635,8 +636,14 @@
     <Reference Include="Unity.VisualScripting.Flow.Editor">
       <HintPath>Library/ScriptAssemblies/Unity.VisualScripting.Flow.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Shared.Editor">
       <HintPath>Library/ScriptAssemblies/Unity.VisualScripting.Shared.Editor.dll</HintPath>

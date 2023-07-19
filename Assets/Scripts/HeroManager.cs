@@ -16,6 +16,7 @@ public class HeroManager : MonoBehaviour
         if(PlayerPrefs.GetInt("Hero" + index,0)==1)
         {
             isLocked = false;
+           
         }
         else
         {

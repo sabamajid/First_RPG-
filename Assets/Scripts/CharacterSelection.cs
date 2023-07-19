@@ -110,7 +110,7 @@ public class CharacterSelection : MonoBehaviour
     public void startGame()
     {
        // PlayerPrefs.SetInt("selectedCharacter", selectedCharacter);
-        SceneManager.LoadScene(1, LoadSceneMode.Single);
+       // SceneManager.LoadScene(1, LoadSceneMode.Single);
     }
 
     public void selectHero()
