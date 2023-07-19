@@ -64,6 +64,7 @@
     <Compile Include="Assets/NavMeshComponents-master/Library/PackageCache/com.unity.ide.vscode@1.2.5/Editor/VSCodeDiscovery.cs" />
     <Compile Include="Assets/NavMeshComponents-master/Library/PackageCache/com.unity.ide.vscode@1.2.5/Editor/ProjectGeneration/ProjectGenerationFlag.cs" />
     <Compile Include="Assets/NavMeshComponents-master/Library/PackageCache/com.unity.ide.vscode@1.2.5/Editor/ProjectGeneration/FileIO.cs" />
+    <Compile Include="Assets/Health Bar/Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

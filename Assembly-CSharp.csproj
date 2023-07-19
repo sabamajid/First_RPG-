@@ -66,6 +66,13 @@
     <Compile Include="Assets/Scripts/HeroManager.cs" />
     <Compile Include="Assets/Scripts/CharacterSelection.cs" />
     <Compile Include="Assets/Scripts/CharacterManager.cs" />
+    <Compile Include="Assets/Health Bar/Assets/TutorialInfo/Scripts/Readme.cs" />
+    <Compile Include="Assets/Health Bar/Assets/Scripts/PlayerMovement.cs" />
+    <Compile Include="Assets/Health Bar/Assets/Billboard.cs" />
+    <Compile Include="Assets/Health Bar/Assets/Player.cs" />
+    <Compile Include="Assets/Health Bar/Assets/Scripts/SimpleCameraController.cs" />
+    <Compile Include="Assets/Health Bar/Assets/HealthBar.cs" />
+    <Compile Include="Assets/Health Bar/Assets/Scripts/Rotator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/NavMeshComponents-master/Library/ScriptAssemblies/NavMeshComponents.dll" />
@@ -83,6 +90,7 @@
     <None Include="Assets/NavMeshComponents-master/Library/LibraryFormatVersion.txt" />
     <None Include="Assets/NavMeshComponents-master/Library/LastSceneManagerSetup.txt" />
     <None Include="Assets/NavMeshComponents-master/ProjectSettings/ProjectVersion.txt" />
+    <None Include="Assets/Health Bar/ProjectSettings/ProjectVersion.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
