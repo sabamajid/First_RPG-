@@ -8,7 +8,8 @@ public class EnemyHandler : MonoBehaviour
     public GameObject Enemy;
 
     public EnemyHealthManager enemyHealthManager;
-   [SerializeField] private int newEnemyHealthValue;
+    public EnemyScaler enemyScaler;
+    [SerializeField] private int newEnemyHealthValue;
     
     private void Start()
     {
@@ -28,7 +29,9 @@ public class EnemyHandler : MonoBehaviour
             {
                 newEnemyHealthValue = currentEnemyHealth + 30;
                 enemyHealthManager.SetEnemyHealth(newEnemyHealthValue);
-            }  
+                enemyScaler.IncreaseScale();
+            }
+           
         }
         Enemy.GetComponent<HealthManager>().maxHealth = currentEnemyHealth;
 

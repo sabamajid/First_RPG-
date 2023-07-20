@@ -346,6 +346,7 @@
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/EnemyHandler.cs"
 "Assets/EnemyHealthManager.cs"
+"Assets/EnemyScaler.cs"
 "Assets/Health Bar/Assets/Billboard.cs"
 "Assets/Health Bar/Assets/HealthBar.cs"
 "Assets/Health Bar/Assets/Player.cs"

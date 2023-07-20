@@ -77,6 +77,7 @@
     <Compile Include="Assets/Health Bar/Assets/Billboard.cs" />
     <Compile Include="Assets/EnemyHandler.cs" />
     <Compile Include="Assets/EnemyHealthManager.cs" />
+    <Compile Include="Assets/EnemyScaler.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/PolygonParticles/Materials/SHARED BY LUXURYPANDA.txt" />
