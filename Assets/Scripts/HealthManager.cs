@@ -8,12 +8,7 @@ public class HealthManager : MonoBehaviour
     private int currentHealth;
 
     public HealthBar healthBar;
-    GameObject Enemy = GameObject.FindGameObjectWithTag("Enemy");
-    private void Awake()
-    {
-        Destroy(Enemy);
-
-    }
+ 
     private void Start()
     {
      

@@ -18,7 +18,7 @@ public class CharacterSelection : MonoBehaviour
 
 
     private const string PlayerPrefKey = "PlayCount";
-    private const int MaxPlayCount = 5;
+    private const int MaxPlayCount = 4;
 
     private void Awake()
     {

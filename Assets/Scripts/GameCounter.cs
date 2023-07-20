@@ -3,7 +3,7 @@ using UnityEngine;
 public class GameCounter : MonoBehaviour
 {
     private const string PlayerPrefKey = "PlayCount";
-    private const int MaxPlayCount = 5;
+    private const int MaxPlayCount = 4;
 
     private void Start()
     {
@@ -13,7 +13,6 @@ public class GameCounter : MonoBehaviour
         {
             // Perform action for the 5th play
             Debug.Log("Congratulations! You have played 5 times!");
-            // Perform your action here (e.g., show a reward, unlock a feature, etc.)
 
             // Reset play count to zero
             playCount = 0;
