@@ -1,17 +1,32 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
+using Unity.VisualScripting;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 public class SceneManager : MonoBehaviour
 {
+
+    public static SceneManager instance;
     private bool isActive = false;
     [SerializeField] private CinemachineVirtualCamera virtualCamera;
+
+    public GameObject gameoverPanael;
+    public Text winLoseTxt;
 
     private void Awake()
     {
         virtualCamera = GameObject.Find("VirtualCameraGameObject").GetComponent<CinemachineVirtualCamera>();
+
+        if (instance != null && instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            instance = this;
+        }
     }
     public void SelectPlayer1()
     {
@@ -102,4 +117,17 @@ public class SceneManager : MonoBehaviour
             }
         }
     }
+
+
+    public void HomeBtn()
+    {
+        Application.LoadLevel(0);
+    }
+
+    public void PlayAgain()
+    {
+        Application.LoadLevel(1);
+    }
+
+
 }

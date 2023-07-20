@@ -8,9 +8,15 @@ public class HealthManager : MonoBehaviour
     private int currentHealth;
 
     public HealthBar healthBar;
+    GameObject Enemy = GameObject.FindGameObjectWithTag("Enemy");
+    private void Awake()
+    {
+        Destroy(Enemy);
 
+    }
     private void Start()
     {
+     
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
     }
@@ -28,7 +34,24 @@ public class HealthManager : MonoBehaviour
 
     private void Die()
     {
+        GameObject Enemy = GameObject.FindGameObjectWithTag("Enemy");
+        GameObject Hero = GameObject.FindGameObjectWithTag("Clone");
         // Handle object destruction or any other necessary actions when health reaches zero.
         Destroy(gameObject);
+
+        if (Enemy != null)
+        {
+            SceneManager.instance.gameoverPanael.SetActive(true);
+            SceneManager.instance.winLoseTxt.text = "You Win";
+            //you win
+        }
+        if(Hero != null)
+        {
+            SceneManager.instance.gameoverPanael.SetActive(true);
+            SceneManager.instance.winLoseTxt.text = "You lose";
+            //you lose
+        }
+
+
     }
 }

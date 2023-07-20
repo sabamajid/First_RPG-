@@ -68,12 +68,13 @@
     <Compile Include="Assets/Scripts/removeHero.cs" />
     <Compile Include="Assets/Health Bar/Assets/HealthBar.cs" />
     <Compile Include="Assets/Scripts/AnimatorController.cs" />
+    <Compile Include="Assets/SelectionSceneManager.cs" />
     <Compile Include="Assets/Scripts/HeroManager.cs" />
     <Compile Include="Assets/Health Bar/Assets/Player.cs" />
     <Compile Include="Assets/Scripts/CharacterSelection.cs" />
     <Compile Include="Assets/Scripts/CharacterManager.cs" />
+    <Compile Include="Assets/Scripts/GameCounter.cs" />
     <Compile Include="Assets/Health Bar/Assets/Billboard.cs" />
-    <Compile Include="Assets/SelectionSceneManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/PolygonParticles/Materials/SHARED BY LUXURYPANDA.txt" />

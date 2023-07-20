@@ -356,6 +356,7 @@
 "Assets/Scripts/CharacterSelection.cs"
 "Assets/Scripts/CloneController.cs"
 "Assets/Scripts/EnemyAiTutorial.cs"
+"Assets/Scripts/GameCounter.cs"
 "Assets/Scripts/HealthManager.cs"
 "Assets/Scripts/HeroManager.cs"
 "Assets/Scripts/removeHero.cs"

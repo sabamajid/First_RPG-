@@ -2,6 +2,7 @@ using System;
 using System.CodeDom.Compiler;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,16 +14,16 @@ public class HeroManager : MonoBehaviour
 
     void Start()
     {
-        if(PlayerPrefs.GetInt("Hero" + index,0)==1)
+        if (PlayerPrefs.GetInt("Hero" + index, 0) == 1)
         {
             isLocked = false;
-           
+
         }
         else
         {
             isLocked = true;
         }
-        if(index == 0)
+        if (index == 0)
         {
             isLocked = false;
         }
@@ -37,5 +38,4 @@ public class HeroManager : MonoBehaviour
 
     }
 
-    
 }

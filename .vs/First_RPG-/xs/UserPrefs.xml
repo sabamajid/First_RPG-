@@ -3,19 +3,22 @@
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="bed12db5-7c38-4171-9265-f159dfaf4609" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Health Bar/Assets/Billboard.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameCounter.cs">
     <Files>
-      <File FileName="Assets/Scripts/CharacterSelection.cs" Line="113" Column="10" />
+      <File FileName="Assets/Scripts/CharacterSelection.cs" Line="218" Column="32" />
       <File FileName="Assets/Scripts/SpawnCharacter.cs" Line="24" Column="110" />
-      <File FileName="Assets/Scripts/HeroManager.cs" Line="19" Column="12" />
-      <File FileName="Assets/Scripts/removeHero.cs" Line="22" Column="28" />
+      <File FileName="Assets/Scripts/HeroManager.cs" Line="16" Column="2" />
+      <File FileName="Assets/Scripts/removeHero.cs" />
       <File FileName="Assets/Scripts/CloneController.cs" Line="22" Column="17" />
-      <File FileName="Assets/SceneManager.cs" Line="95" Column="26" />
-      <File FileName="Assets/Scripts/CharacterManager.cs" Line="52" Column="1" />
-      <File FileName="Assets/Scripts/EnemyAiTutorial.cs" Line="138" Column="81" />
+      <File FileName="Assets/Scripts/CharacterManager.cs" Line="52" Column="102" />
+      <File FileName="Assets/Scripts/EnemyAiTutorial.cs" />
       <File FileName="Assets/Scripts/HealthManager.cs" Line="21" Column="44" />
       <File FileName="Assets/Health Bar/Assets/Player.cs" Line="33" Column="2" />
       <File FileName="Assets/Health Bar/Assets/Billboard.cs" Line="12" Column="8" />
+      <File FileName="Library/PackageCache/com.unity.collab-proxy@2.0.3/Editor/PlasticSCM/UI/Images.cs" Line="451" Column="1" />
+      <File FileName="Assets/NavMeshComponents-master/Assets/Tests/Editor/PrefabSavingUtil.cs" Line="2" Column="25" />
+      <File FileName="Assets/SelectionSceneManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GameCounter.cs" Line="13" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

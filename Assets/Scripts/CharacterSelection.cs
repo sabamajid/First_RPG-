@@ -6,12 +6,19 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
+using UnityEngine.TextCore.Text;
 
 public class CharacterSelection : MonoBehaviour
 {
     public static CharacterSelection instance;
 
     public Text Name,hlth, attackpower, experience, lvl;
+
+
+
+    private const string PlayerPrefKey = "PlayCount";
+    private const int MaxPlayCount = 5;
 
     private void Awake()
     {
@@ -38,21 +45,34 @@ public class CharacterSelection : MonoBehaviour
     public string[] Health, AttackPower, Experince, level;
     public int selectedCharacter = 0;
     public int selectedString = 0;
-
-
-
     private void Start()
     {
+
+
         //to check which characters are selected
         for (int i=0; i<Characters.Length; i++)
         {
                 Characters[i].tag = "isNotSelected";
-         
+           
+
+
         }
         hlth.text = Health[selectedString];
         attackpower.text = AttackPower[selectedString];
         experience.text = Experince[selectedString];
         lvl.text = level[selectedString];
+
+
+
+        UnlockCharacter();
+
+        int playCount = PlayerPrefs.GetInt(PlayerPrefKey, 0);
+        Debug.Log("playcounttt"+playCount);
+        if (playCount >= MaxPlayCount)
+        {
+            UnlockCharacter();
+        }
+
     }
     public void NextCharacter()
     {
@@ -129,12 +149,13 @@ public class CharacterSelection : MonoBehaviour
       
     }
 
+    [System.Obsolete]
     public void startGame()
     {
        if (heroimage1 != null && heroimage2 != null && heroimage3 != null )
          {
-        //    SceneManager.LoadScene(1);
-        
+            //    SceneManager.LoadScene(1);
+            Application.LoadLevel(1);
         }
     }
 
@@ -213,12 +234,28 @@ public class CharacterSelection : MonoBehaviour
     }
     public void UnlockCharacter()
     {
-        PlayerPrefs.SetInt("Hero" + selectedCharacter, 1); 
-        Characters[selectedCharacter].GetComponent<HeroManager>().isLocked = false;
+        for (int i = 0; i < Characters.Length; i++)
+        {
+         
+            HeroManager heroManager = Characters[i].GetComponent<HeroManager>();
+            if (heroManager.isLocked)
+            {
+                heroManager.isLocked = false;
+                Debug.Log(Characters[i].name + " is now unlocked.");
 
-        SelectedBtn.text = "Select";
-        SelectedBtn.transform.parent.gameObject.GetComponent<Button>().interactable = true;
+                PlayerPrefs.SetInt("Hero" + Characters[i], 1);
+                PlayerPrefs.Save(); 
+
+                return; 
+            }
+            Debug.Log("already unlocked heros");
+        }
+        Debug.Log("All heroes are already unlocked.");
+
+
+
+
+
+
     }
-
-
 }
