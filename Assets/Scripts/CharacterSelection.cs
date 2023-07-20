@@ -4,12 +4,14 @@ using System.Linq;
 using System.Reflection;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CharacterSelection : MonoBehaviour
 {
     public static CharacterSelection instance;
+
+    public Text Name,hlth, attackpower, experience, lvl;
 
     private void Awake()
     {
@@ -33,28 +35,40 @@ public class CharacterSelection : MonoBehaviour
 
     public Text SelectedBtn;
     public GameObject[] Characters;
+    public string[] Health, AttackPower, Experince, level;
     public int selectedCharacter = 0;
+    public int selectedString = 0;
+
 
 
     private void Start()
     {
-
-
         //to check which characters are selected
         for (int i=0; i<Characters.Length; i++)
         {
                 Characters[i].tag = "isNotSelected";
          
         }
+        hlth.text = Health[selectedString];
+        attackpower.text = AttackPower[selectedString];
+        experience.text = Experince[selectedString];
+        lvl.text = level[selectedString];
     }
     public void NextCharacter()
     {
-
-
-        
-
         Characters[selectedCharacter].SetActive(false);
+
+  
+
         selectedCharacter = (selectedCharacter + 1) % Characters.Length;
+        selectedString = (selectedString + 1) % Characters.Length;
+
+        Name.text = Characters[selectedCharacter].name;
+        hlth.text = Health[selectedString];
+        attackpower.text = AttackPower[selectedString];
+        experience.text = Experince[selectedString];
+        lvl.text = level[selectedString];
+
         Characters[selectedCharacter].SetActive(true);
 
         StartCoroutine(ExampleCoroutine());
@@ -80,15 +94,23 @@ public class CharacterSelection : MonoBehaviour
     }
     public void previousCharacter()
     {
-       
-
         Characters[selectedCharacter].SetActive(false);
         selectedCharacter--;
+        selectedString--;
+
         if (selectedCharacter < 0)
         {
             selectedCharacter += Characters.Length;
+            selectedString += Characters.Length;
+
 
         }
+
+        Name.text = Characters[selectedCharacter].name;
+        hlth.text = Health[selectedString];
+        attackpower.text = AttackPower[selectedString];
+        experience.text = Experince[selectedString];
+        lvl.text = level[selectedString];
         Characters[selectedCharacter].SetActive(true);
 
         if (Characters[selectedCharacter].GetComponent<HeroManager>().isLocked == true)
@@ -109,8 +131,11 @@ public class CharacterSelection : MonoBehaviour
 
     public void startGame()
     {
-       // PlayerPrefs.SetInt("selectedCharacter", selectedCharacter);
-       // SceneManager.LoadScene(1, LoadSceneMode.Single);
+       if (heroimage1 != null && heroimage2 != null && heroimage3 != null )
+         {
+        //    SceneManager.LoadScene(1);
+        
+        }
     }
 
     public void selectHero()

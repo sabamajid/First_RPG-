@@ -49,7 +49,7 @@ public class  CharacterManager : MonoBehaviour
 
         //for raycast hit
         float rotatioSpeed = 10f;
-        transform.forward = Vector3.Slerp(transform.forward, moveDir, Time.deltaTime* rotatioSpeed);
+        transform.forward = Vector3.Slerp(transform.forward, moveDir, Time.deltaTime * rotatioSpeed);
 
         if (Input.GetKeyDown(KeyCode.F))
         {

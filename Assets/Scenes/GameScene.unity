@@ -2559,7 +2559,7 @@ MonoBehaviour:
   health: 120
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 10
-  timeBetweenAttacks: 2
+  timeBetweenAttacks: 0.5
   projectile: {fileID: 7476521154342808033, guid: 2ef739ece584d4271af3a34d9f27995b, type: 3}
   sightRange: 30
   attackRange: 20
