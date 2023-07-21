@@ -56,28 +56,29 @@
     <Analyzer Include="/Applications/Visual Studio.app/Contents/MonoBundle/Addins/MonoDevelop.Unity/Analyzers/Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/Scripts/EnemyScaler.cs" />
     <Compile Include="Assets/Health Bar/Assets/Scripts/PlayerMovement.cs" />
     <Compile Include="Assets/Health Bar/Assets/Scripts/SimpleCameraController.cs" />
     <Compile Include="Assets/Health Bar/Assets/Scripts/Rotator.cs" />
     <Compile Include="Assets/Scripts/CloneController.cs" />
     <Compile Include="Assets/Scripts/SpawnCharacter.cs" />
     <Compile Include="Assets/Scripts/HealthManager.cs" />
+    <Compile Include="Assets/GameController.cs" />
+    <Compile Include="Assets/Scripts/EnemyHealthManager.cs" />
     <Compile Include="Assets/Scripts/EnemyAiTutorial.cs" />
     <Compile Include="Assets/Scripts/SceneManager.cs" />
+    <Compile Include="Assets/Scripts/EnemyHandler.cs" />
     <Compile Include="Assets/Health Bar/Assets/TutorialInfo/Scripts/Readme.cs" />
     <Compile Include="Assets/Scripts/removeHero.cs" />
     <Compile Include="Assets/Health Bar/Assets/HealthBar.cs" />
     <Compile Include="Assets/Scripts/AnimatorController.cs" />
-    <Compile Include="Assets/SelectionSceneManager.cs" />
+    <Compile Include="Assets/Scripts/SelectionSceneManager.cs" />
     <Compile Include="Assets/Scripts/HeroManager.cs" />
     <Compile Include="Assets/Health Bar/Assets/Player.cs" />
     <Compile Include="Assets/Scripts/CharacterSelection.cs" />
     <Compile Include="Assets/Scripts/CharacterManager.cs" />
     <Compile Include="Assets/Scripts/GameCounter.cs" />
     <Compile Include="Assets/Health Bar/Assets/Billboard.cs" />
-    <Compile Include="Assets/EnemyHandler.cs" />
-    <Compile Include="Assets/EnemyHealthManager.cs" />
-    <Compile Include="Assets/EnemyScaler.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/PolygonParticles/Materials/SHARED BY LUXURYPANDA.txt" />

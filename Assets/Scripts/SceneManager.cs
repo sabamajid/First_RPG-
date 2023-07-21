@@ -1,4 +1,5 @@
- using System.Collections;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using Unity.VisualScripting;
@@ -11,6 +12,12 @@ public class SceneManager : MonoBehaviour
     public static SceneManager instance;
     private bool isActive = false;
     [SerializeField] private CinemachineVirtualCamera virtualCamera;
+
+    //Player Side buttons
+    public Button player1Btn, player2Btn, player3Btn;
+
+
+
 
     public GameObject gameoverPanael;
     public Text winLoseTxt;
@@ -28,6 +35,30 @@ public class SceneManager : MonoBehaviour
             instance = this;
         }
     }
+    private void Start()
+    {
+        GameObject[] cloneObjects = GameObject.FindGameObjectsWithTag("Clone");
+
+        for (int i = 0; i < cloneObjects.Length; i++)
+        {
+            if(i == 0)
+            {
+                player1Btn.transform.GetComponentInChildren<Text>().text = cloneObjects[i].name;
+            }
+            if (i == 1)
+            {
+                player2Btn.transform.GetComponentInChildren<Text>().text = cloneObjects[i].name;
+            }
+            if (i == 2)
+            {
+                player3Btn.transform.GetComponentInChildren<Text>().text = cloneObjects[i].name;
+            }
+
+        }
+
+     }
+
+
     public void SelectPlayer1()
     {
         GameObject[] cloneObjects = GameObject.FindGameObjectsWithTag("Clone");

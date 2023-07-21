@@ -344,9 +344,7 @@
 -r:"Library/Bee/artifacts/200b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEngine.UI.ref.dll"
-"Assets/EnemyHandler.cs"
-"Assets/EnemyHealthManager.cs"
-"Assets/EnemyScaler.cs"
+"Assets/GameController.cs"
 "Assets/Health Bar/Assets/Billboard.cs"
 "Assets/Health Bar/Assets/HealthBar.cs"
 "Assets/Health Bar/Assets/Player.cs"
@@ -359,13 +357,16 @@
 "Assets/Scripts/CharacterSelection.cs"
 "Assets/Scripts/CloneController.cs"
 "Assets/Scripts/EnemyAiTutorial.cs"
+"Assets/Scripts/EnemyHandler.cs"
+"Assets/Scripts/EnemyHealthManager.cs"
+"Assets/Scripts/EnemyScaler.cs"
 "Assets/Scripts/GameCounter.cs"
 "Assets/Scripts/HealthManager.cs"
 "Assets/Scripts/HeroManager.cs"
 "Assets/Scripts/removeHero.cs"
 "Assets/Scripts/SceneManager.cs"
+"Assets/Scripts/SelectionSceneManager.cs"
 "Assets/Scripts/SpawnCharacter.cs"
-"Assets/SelectionSceneManager.cs"
 -langversion:9.0
 
 /deterministic

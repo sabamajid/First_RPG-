@@ -5,13 +5,12 @@ using UnityEngine;
 public class HealthManager : MonoBehaviour
 {
     public int maxHealth;
-    private int currentHealth;
+    public int currentHealth;
 
     public HealthBar healthBar;
- 
+
     private void Start()
     {
-     
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
     }
@@ -26,26 +25,38 @@ public class HealthManager : MonoBehaviour
             Die();
         }
     }
-
+    public float GetCurrentHealth()
+    {
+        // Return the current health
+        return currentHealth;
+    }
     private void Die()
     {
-        GameObject Enemy = GameObject.FindGameObjectWithTag("Enemy");
-        GameObject Hero = GameObject.FindGameObjectWithTag("Clone");
+
+        //GameController.instance.CheckWin();
+        //GameController.instance.CheckWin();
+
+        //CheckLose();
+        //GameObject Enemy = GameObject.FindGameObjectWithTag("Enemy");
+        //GameObject[] Hero = GameObject.FindGameObjectsWithTag("Clone");
         // Handle object destruction or any other necessary actions when health reaches zero.
         Destroy(gameObject);
 
-        if (Enemy != null)
-        {
-            SceneManager.instance.gameoverPanael.SetActive(true);
-            SceneManager.instance.winLoseTxt.text = "You Win";
-            //you win
-        }
-        if(Hero != null)
-        {
-            SceneManager.instance.gameoverPanael.SetActive(true);
-            SceneManager.instance.winLoseTxt.text = "You lose";
-            //you lose
-        }
+        //if (Enemy == null)
+        //{
+        //    Debug.Log("enemy is dead");
+        //    //SceneManager.instance.gameoverPanael.SetActive(true);
+        //    //SceneManager.instance.winLoseTxt.text = "You Win";
+        //    //you win
+        //}
+        //if (Hero.Length <= 0)
+        //{
+        //    Debug.Log("hero is dead");
+        //    //SceneManager.instance.gameoverPanael.SetActive(true);
+        //    //SceneManager.instance.winLoseTxt.text = "You lose";
+        //    //you lose
+        //}
+       
 
 
     }
