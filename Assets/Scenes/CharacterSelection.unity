@@ -3739,10 +3739,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: {fileID: 1082854541}
-  hlth: {fileID: 327826796}
-  attackpower: {fileID: 1912060990}
-  experience: {fileID: 1597576287}
-  lvl: {fileID: 831264980}
+  hlth: {fileID: 1730799250}
+  attackpower: {fileID: 2122288003}
+  experience: {fileID: 1009573876}
+  lvl: {fileID: 1239449316}
   heroimage1: {fileID: 2018255630}
   heroimage2: {fileID: 193165468}
   heroimage3: {fileID: 347074961}
