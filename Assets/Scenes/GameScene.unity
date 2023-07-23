@@ -1027,7 +1027,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 26, y: 158.45532}
+  m_AnchoredPosition: {x: 26, y: 158.45508}
   m_SizeDelta: {x: 342.235, y: 105.968}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &586971803
@@ -2466,6 +2466,7 @@ MonoBehaviour:
   player3Btn: {fileID: 718660329}
   gameoverPanael: {fileID: 1104379635}
   winLoseTxt: {fileID: 1949794867}
+  playAgainBtn: {fileID: 1940854407}
 --- !u!1 &1083784566
 GameObject:
   m_ObjectHideFlags: 0
@@ -3010,6 +3011,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  currentHealth: 0
   healthBar: {fileID: 950885082}
 --- !u!114 &1429142883
 MonoBehaviour:
@@ -3033,7 +3035,7 @@ MonoBehaviour:
   health: 120
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 10
-  timeBetweenAttacks: 0.5
+  timeBetweenAttacks: 4
   projectile: {fileID: 7476521154342808033, guid: 2ef739ece584d4271af3a34d9f27995b, type: 3}
   sightRange: 25
   attackRange: 15
@@ -3251,7 +3253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 0}
   heroClones: []
-  enemyHealth: 0
+  enemyHealth: {fileID: 0}
   heroHealths: []
 --- !u!1 &1619851596
 GameObject:

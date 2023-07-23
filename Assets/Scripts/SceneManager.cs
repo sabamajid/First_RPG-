@@ -16,11 +16,11 @@ public class SceneManager : MonoBehaviour
     //Player Side buttons
     public Button player1Btn, player2Btn, player3Btn;
 
-
-
-
     public GameObject gameoverPanael;
     public Text winLoseTxt;
+    public GameObject playAgainBtn;
+
+
 
     private void Awake()
     {

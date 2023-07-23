@@ -63,7 +63,7 @@
     <Compile Include="Assets/Scripts/CloneController.cs" />
     <Compile Include="Assets/Scripts/SpawnCharacter.cs" />
     <Compile Include="Assets/Scripts/HealthManager.cs" />
-    <Compile Include="Assets/GameController.cs" />
+    <Compile Include="Assets/Scripts/GameController.cs" />
     <Compile Include="Assets/Scripts/EnemyHealthManager.cs" />
     <Compile Include="Assets/Scripts/EnemyAiTutorial.cs" />
     <Compile Include="Assets/Scripts/SceneManager.cs" />

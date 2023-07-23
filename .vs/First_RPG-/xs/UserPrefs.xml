@@ -12,7 +12,7 @@
       <File FileName="Assets/Scripts/CloneController.cs" />
       <File FileName="Assets/Scripts/CharacterManager.cs" />
       <File FileName="Assets/Scripts/EnemyAiTutorial.cs" />
-      <File FileName="Assets/Scripts/HealthManager.cs" Line="22" Column="9" />
+      <File FileName="Assets/Scripts/HealthManager.cs" Line="32" Column="6" />
       <File FileName="Assets/Health Bar/Assets/Player.cs" />
       <File FileName="Assets/Health Bar/Assets/Billboard.cs" />
       <File FileName="Library/PackageCache/com.unity.collab-proxy@2.0.3/Editor/PlasticSCM/UI/Images.cs" Line="451" Column="1" />
@@ -23,7 +23,7 @@
       <File FileName="Assets/EnemyHandler.cs" Line="16" Column="1" />
       <File FileName="Assets/EnemyHealthManager.cs" Line="7" Column="1" />
       <File FileName="Assets/EnemyScaler.cs" Line="21" Column="32" />
-      <File FileName="Assets/GameController.cs" Line="81" Column="14" />
+      <File FileName="Assets/GameController.cs" Line="37" Column="58" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

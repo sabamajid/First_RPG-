@@ -18,7 +18,7 @@ public class CharacterSelection : MonoBehaviour
 
 
     private const string PlayerPrefKey = "PlayCount";
-    private const int MaxPlayCount = 4;
+    private const int MaxPlayCount = 5;
 
     private void Awake()
     {
@@ -47,39 +47,40 @@ public class CharacterSelection : MonoBehaviour
     public int selectedString = 0;
     private void Start()
     {
+        //to get isLocked Status
+        Invoke("TurnOffHeros", 0.5f);
+
+        UnlockCharacter();
 
 
         //to check which characters are selected
         for (int i=0; i<Characters.Length; i++)
         {
                 Characters[i].tag = "isNotSelected";
-           
-
 
         }
+
+        Name.text = Characters[selectedCharacter].name;
         hlth.text = Health[selectedString];
         attackpower.text = AttackPower[selectedString];
         experience.text = Experince[selectedString];
         lvl.text = level[selectedString];
 
-
-
-        UnlockCharacter();
-
-        int playCount = PlayerPrefs.GetInt(PlayerPrefKey, 0);
-        Debug.Log("playcounttt"+playCount);
-        if (playCount >= MaxPlayCount)
-        {
-            UnlockCharacter();
-        }
+        
 
     }
+
+    public void TurnOffHeros()
+    {
+        for (int i = 1; i < Characters.Length; i++)
+        {
+            Characters[i].SetActive(false);
+        }
+    }
+
     public void NextCharacter()
     {
         Characters[selectedCharacter].SetActive(false);
-
-  
-
         selectedCharacter = (selectedCharacter + 1) % Characters.Length;
         selectedString = (selectedString + 1) % Characters.Length;
 
@@ -232,30 +233,45 @@ public class CharacterSelection : MonoBehaviour
             SelectedBtn.text = "Select";
         }
     }
+
     public void UnlockCharacter()
     {
+        int playCount = PlayerPrefs.GetInt(PlayerPrefKey, 0);
+        Debug.Log("Playecount"  + playCount);
+        if (playCount == MaxPlayCount)
+        {
+            UnlockCharacterCheck();
+
+           
+        }
+    }
+    public void UnlockCharacterCheck()
+    {
+
         for (int i = 0; i < Characters.Length; i++)
         {
-         
             HeroManager heroManager = Characters[i].GetComponent<HeroManager>();
             if (heroManager.isLocked)
             {
-                heroManager.isLocked = false;
+                // Hero is locked
+                Debug.Log(Characters[i].name + " is locked.");
+             
                 Debug.Log(Characters[i].name + " is now unlocked.");
+                PlayerPrefs.SetInt("Hero" + i, 1);
+                heroManager.isLocked = false;
+                PlayerPrefs.Save();
 
-                PlayerPrefs.SetInt("Hero" + Characters[i], 1);
-                PlayerPrefs.Save(); 
-
-                return; 
+                PlayerPrefs.SetInt(PlayerPrefKey, 0);
+                PlayerPrefs.Save();
+                return;
+            }
+            else
+            {
+                // Hero is unlocked
+                Debug.Log(Characters[i].name + " is unlocked.");
             }
             Debug.Log("already unlocked heros");
         }
         Debug.Log("All heroes are already unlocked.");
-
-
-
-
-
-
     }
 }
